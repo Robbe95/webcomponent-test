@@ -9,7 +9,7 @@ export default defineConfig({
       entry: resolve(__dirname, './src/index.ts'),
       name: 'index',
       // the proper extensions will be added
-      fileName: format => `index.${format}.js`,
+      fileName: 'index',
     },
     rollupOptions: {
     },
