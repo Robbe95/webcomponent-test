@@ -6,7 +6,6 @@
   "description": "[![NPM version](https://img.shields.io/npm/v/pkg-name?color=a1b858&label=)](https://www.npmjs.com/package/pkg-name)",
   "author": "Robbe Vaes",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
   "homepage": "https://github.com/Robbe95/webcomponent-test#readme",
   "repository": {
     "type": "git",
@@ -20,12 +19,12 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "require": "./dist/index.es.js",
+      "import": "./dist/index.umd.js"
     }
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.umd.js",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
