@@ -1,2 +1,4 @@
-export const one = 1
-export const two = 2
+import { defineCustomElement } from 'vue'
+import CurrentTime from './CurrentTime.vue'
+
+export const ExampleElement = defineCustomElement(CurrentTime)
