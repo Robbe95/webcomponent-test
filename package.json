@@ -1,9 +1,9 @@
 {
-  "name": "webcomponents-test",
+  "name": "@robbe95/webcomponents-test",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "pnpm@7.12.0",
-  "description": "",
+  "description": "[![NPM version](https://img.shields.io/npm/v/pkg-name?color=a1b858&label=)](https://www.npmjs.com/package/pkg-name)",
   "author": "Robbe Vaes",
   "license": "MIT",
   "funding": "https://github.com/sponsors/antfu",
@@ -12,7 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/Robbe95/webcomponent-test.git"
   },
-  "bugs": "https://github.com/Robbe95/webcomponent-test/issues",
+  "bugs": {
+    "url": "https://github.com/Robbe95/webcomponent-test/issues"
+  },
   "keywords": [],
   "sideEffects": false,
   "exports": {
@@ -60,5 +62,31 @@
     "unbuild": "^0.8.11",
     "vite": "^3.1.2",
     "vitest": "^0.23.4"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-module-utils": "^2.7.3",
+    "eslint-plugin-antfu": "^0.27.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-es": "^4.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-jsonc": "^2.4.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-yml": "^1.1.0",
+    "eslint-plugin-markdown": "^3.0.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "eslint-plugin-vue": "^9.5.1",
+    "eslint-scope": "^7.1.1",
+    "eslint-visitor-keys": "^3.3.0",
+    "jsonc-eslint-parser": "^2.1.0",
+    "eslint-utils": "^3.0.0",
+    "vue-eslint-parser": "^9.0.3",
+    "pkg-types": "^0.3.5",
+    "yaml-eslint-parser": "^1.1.0"
   }
 }
