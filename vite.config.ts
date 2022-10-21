@@ -9,7 +9,7 @@ export default defineConfig({
       entry: resolve(__dirname, './src/index.ts'),
       name: 'component-test',
       // the proper extensions will be added
-      fileName: format => `${format}.js`,
+      fileName: format => `index.${format}.js`,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
