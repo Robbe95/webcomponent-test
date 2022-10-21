@@ -39,8 +39,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
+    "build": "vite build",
+    "dev": "vite build",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
@@ -67,6 +67,7 @@
     "test": "test"
   },
   "dependencies": {
+    "@vitejs/plugin-vue": "^3.1.2",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-module-utils": "^2.7.3",
     "eslint-plugin-antfu": "^0.27.0",
