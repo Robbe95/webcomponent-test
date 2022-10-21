@@ -1,4 +1,11 @@
 import { defineCustomElement } from 'vue'
 import CurrentTime from './CurrentTime.ce.vue'
 
-export const ExampleElement = defineCustomElement(CurrentTime)
+const TimeElement = defineCustomElement(CurrentTime)
+
+// export individual elements
+export { TimeElement }
+
+export function register() {
+  customElements.define('time-element', TimeElement)
+}
