@@ -1,8 +1,12 @@
-// vite.config.js
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
+
 import vue from '@vitejs/plugin-vue'
+
+import pkg from './package.json'
+
 export default defineConfig({
+  plugins: [vue()],
   resolve: {
     alias: [
       {
@@ -13,15 +17,24 @@ export default defineConfig({
   },
   build: {
     lib: {
-      // Could also be a dictionary or array of multiple entry points
-      entry: resolve(__dirname, 'src/index.ts'),
       name: 'index',
-      // the proper extensions will be added
-      fileName: 'index',
+      entry: resolve(__dirname, 'src/index.ts'),
+      formats: ['es'],
     },
     rollupOptions: {
+      external: Object.keys(pkg.dependencies),
+      input: {
+        index: resolve(__dirname, 'src/index.ts'),
+      },
+      output: {
+        globals: {
+          vue: 'Vue',
+        },
+        entryFileNames: () => '[name].js',
+      },
     },
   },
-  plugins: [vue()],
-
+  server: {
+    // host: '192.168.0.21',
+  },
 })
