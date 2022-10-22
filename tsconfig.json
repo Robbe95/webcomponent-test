@@ -1,35 +1,27 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "esnext",
     "useDefineForClassFields": true,
-    "allowSyntheticDefaultImports": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "isolatedModules": true,
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "allowJs": true,
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
+      "@/*": ["src/*"]
+    },
+    "types": [
+      "vite/client",
+    ],
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "declaration": true
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.js",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "auto-imports.d.ts",
-    "components.d.ts",
-    "declarations.d.ts",
-    "shims-vue.d.ts",
-  ]
+  "include": ["vite.config.*", "env.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["**/*.stories.ts"]
 }
